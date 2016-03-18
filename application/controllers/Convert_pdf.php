@@ -9,7 +9,7 @@ class Convert_pdf extends CI_Controller
 
         $query = $this->db->query("select * from users where user_id = '" . $this->input->get('user_id') . "' ");
         $row = $query->row();
-        $data = $row->gender == 'male' ? "White Shirt, Black Pant, Formal Shoes, Cap, Sash" : "Cream coloured saree with golden border and cream blouse, Cap, Cape";
+        $data = $row->gender == 'male' ? "Jodhpuri Coat, White Shirt, Black Pant, Formal Shoes(Black), Sash" : "Cream coloured saree with golden border and cream blouse, Cape";
         //       $this->fpdf->AddPage();
 
         $this->fpdf->SetFont('Arial', '', 14);
@@ -142,13 +142,13 @@ class Convert_pdf extends CI_Controller
         $this->fpdf->SetX(40);
         $this->fpdf->Cell(70, 10, "Eligible for Gold Medal", 0, 0);
 //$this->fpdf->SetX(20);
-        $res= $this->db->query("select * from studentinfo where enrollmentNo='$row->roll_number'");
-        $row2=$res->row();
+        $res = $this->db->query("select * from studentinfo where enrollmentNo='$row->roll_number'");
+        $row2 = $res->row();
         $this->fpdf->SetFont('Times', '', 13);
-	if($res->num_rows() <1) 
-		$this->fpdf->Cell(100, 10,"NO", 0, 1);
+        if ($res->num_rows() < 1)
+            $this->fpdf->Cell(100, 10, "NO", 0, 1);
         else
-		$this->fpdf->Cell(100, 10, $row2->gold==1?"YES":"NO", 0, 1);
+            $this->fpdf->Cell(100, 10, $row2->gold == 1 ? "YES" : "NO", 0, 1);
 
         $this->fpdf->Ln(30);
         $this->fpdf->Output();

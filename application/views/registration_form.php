@@ -120,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="submit" value="Register" class="btn btn-info btn-block" />
 
                             </form>
-                            <a href="<?= base_url() ?>" class="btn btn-info btn-block" />Already Registered?    Sign in </a>
+                            <a href="<?= base_url('login') ?>" class="btn btn-info btn-block" />Already Registered?    Sign in </a>
                         </div>
                     </div>
                 </div>

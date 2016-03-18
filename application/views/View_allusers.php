@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php
                             if ($this->permissions->get_level() >= 3 || $row->user_id == $this->session->userdata('user_id')) {
                                 ?>
-                                <a class = "btn btn-xs btn-danger" href = "<?= base_url('convert_pdf?user_id=' . $row->user_id) ?>" >PDF</a>
+                                <a target="_blank" class = "btn btn-xs btn-danger" href = "<?= base_url('convert_pdf?user_id=' . $row->user_id) ?>" >PDF</a>
                                 <?php
                             }
                         } else {

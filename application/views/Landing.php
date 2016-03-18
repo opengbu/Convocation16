@@ -167,8 +167,10 @@ foreach ($phpToJsVars as $key => $value) {
                         Guest. However, you can receive your degree in person from the University Exam Office after the function
                         is over.
                         The convocation dress code of our University is as follows:<br><br>
-                        <font color="red"> Boys:</font> White Shirt, Black Pant, Formal Shoes, Cap, Sash<br>
-                        <font color="red"> Girls:</font> Cream coloured saree with golden border and cream blouse, Cap, Cape<br><br>
+                        <font color="red"> Boys:</font> Jodhpuri Coat, White Shirt, Black Pant, Formal Shoes(Black), Sash<br>
+                        <font color="red"> Girls:</font> Cream coloured saree with golden border and cream blouse, Cape<br>
+                        <font color="red"> Last Date for Registration:</font> 8th April 2016<br>
+                        <br />
                         <font color="red"> Note:</font> Jodhpuri coats and caps of all sizes are available with the university.
                         Student may buy/hire
                         these items from Dean Student Affairs office on or before 10th April 2016. It is advisable to
@@ -250,7 +252,7 @@ foreach ($phpToJsVars as $key => $value) {
                         <h4 class="modal-title">Developers</h4>
                     </div>
                     <div class="modal-body">
-                        Developed under supervision of Dr. Pradeep Tomar.<br /><br />
+                        Developed under supervision of Dr. Pradeep Tomar and Dr. Vikrant Jain.<br /><br />
                         <p><a href="mailto:sharmasaket703@gmail.com" target="_top">Saket Sharma</a><br />
                             <a href="mailto:varun.10@live.com" target="_top">Varun Garg</a></p>
                     </div>
