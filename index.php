@@ -1,4 +1,17 @@
 <?php
+
+/*
+ * Shitty hack to fix payment redirect issue.
+ */
+
+if (strpos($_SERVER['REQUEST_URI'], 'payment') !== false && strpos($_SERVER['REQUEST_URI'], '?') !== true) {
+	$hack_uri =  $_SERVER['REQUEST_URI'];
+	$hack_uri = substr_replace($hack_uri, "?", strpos($hack_uri,"="), 0);
+	$hack_uri =  'http://' . $_SERVER['HTTP_HOST'] .  $hack_uri;
+	$_SERVER['REQUEST_URI'] = $hack_uri;
+	//header("Location: " . $hack_uri);
+}
+
 /**
  * CodeIgniter
  *

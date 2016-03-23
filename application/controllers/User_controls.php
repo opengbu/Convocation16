@@ -118,7 +118,7 @@ class User_controls extends CI_Controller
                             </div>
                             <br/><br/>
                             <div class="pm-button text-center"><a
-                                    href="https://www.payumoney.com/paybypayumoney/#/116435"><img
+                                    href="https://www.payumoney.com/paybypayumoney/#/8B0A5A1CD09888D8B6B76C56BBE38AB1"><img
                                         src="https://www.payumoney.com//media/images/payby_payumoney/buttons/212.png"/></a>
                             </div>
                             <br/><br/>
@@ -221,7 +221,7 @@ class User_controls extends CI_Controller
                 </div>
                 <br/><br/>
                 <div class="pm-button text-center"><a class=""
-                                                      href="https://www.payumoney.com/paybypayumoney/#/B768B5B1DA942E2106287E0360C621A3"><img
+                                                      href="https://www.payumoney.com/paybypayumoney/#/8B0A5A1CD09888D8B6B76C56BBE38AB1"><img
                             src="https://www.payumoney.com//media/images/payby_payumoney/buttons/212.png"/></a></div>
                 <br/><br/>
                 <div class="pm-button text-center">
@@ -397,7 +397,8 @@ class User_controls extends CI_Controller
 
     public function payment()
     {
-        $request = ltrim($_SERVER['QUERY_STRING'], "=");
+        $request = ltrim($_SERVER['QUERY_STRING'], "?");
+        $request = ltrim($request, "=");
         echo $this->load->view('common/header', '', TRUE);
 
         if ($request == "success") {
@@ -409,44 +410,45 @@ class User_controls extends CI_Controller
                     <span class="glyphicon glyphicon-ok"></span> <strong>Success</strong>
                     <hr class="message-inner-separator">
                     Your Registration Fee has been received.
-                    <br/><b>Please bring <b><div style = "color: #ff0000; display: inline" >both</div></b> Fee Slip and
+                    <br/><b>Please bring <b>
+                            <div style="color: #ff0000; display: inline">both</div>
+                        </b> Fee Slip and
                         <a target="_blank"
-                           href="<?= base_url('convert_pdf?user_id=' . $this->session->userdata('user_id')) ?>">Registration Receipt</a>
+                           href="<?= base_url('convert_pdf?user_id=' . $this->session->userdata('user_id')) ?>">Registration
+                            Receipt</a>
                         with you for ceremony.</b>
 
                 </div>
             </div>
             <?php
-        }
-        else
-            {
-  ?>
-                <br/><br/><br/>
-                <div class="col-sm-6 col-md-6 col-sm-offset-2 col-md-offset-2">
-                    <div class="alert alert-danger centered-form text-center">
+        } else {
+            ?>
+            <br/><br/><br/>
+            <div class="col-sm-6 col-md-6 col-sm-offset-2 col-md-offset-2">
+                <div class="alert alert-danger centered-form text-center">
 
-                        <span class="glyphicon glyphicon-remove"></span> <strong>Error</strong>
-                        <hr class="message-inner-separator">
-                        Your Registration Fee could not be received. <br />
-                        Please try again using button bellow.
-                    </div>
-                    <br/><br/>
-                    <div class="pm-button text-center"><a class=""
-                                                          href="https://www.payumoney.com/paybypayumoney/#/B768B5B1DA942E2106287E0360C621A3"><img
-                                src="https://www.payumoney.com//media/images/payby_payumoney/buttons/212.png"/></a></div>
-                    <br/><br/>
-                    <br/>
-                    <div class="text-center">
-                        <b><font color='red'>Note:</font> You must bring both registration receipt and <br/>payment receipt
-                            (That you receive from
-                            payment gateway ) at convocation ceremony.</b>
-                    </div>
+                    <span class="glyphicon glyphicon-remove"></span> <strong>Error</strong>
+                    <hr class="message-inner-separator">
+                    Your Registration Fee could not be received. <br/>
+                    Please try again using button bellow.
                 </div>
-                <?php
-            }
-            echo $this->load->view('common/footer', '', TRUE);
-
+                <br/><br/>
+                <div class="pm-button text-center"><a class=""
+                                                      href="https://www.payumoney.com/paybypayumoney/#/8B0A5A1CD09888D8B6B76C56BBE38AB1"><img
+                            src="https://www.payumoney.com//media/images/payby_payumoney/buttons/212.png"/></a></div>
+                <br/><br/>
+                <br/>
+                <div class="text-center">
+                    <b><font color='red'>Note:</font> You must bring both registration receipt and <br/>payment receipt
+                        (That you receive from
+                        payment gateway ) at convocation ceremony.</b>
+                </div>
+            </div>
+            <?php
         }
+        echo $this->load->view('common/footer', '', TRUE);
 
     }
+
+}
     
